@@ -1,6 +1,6 @@
 <form [formGroup]="formGroup" class="registration-form" (ngSubmit)="onSubmit()">
     <mat-form-field appearance="fill">
-        <mat-label>Email</mat-label>
+        <mat-label>Full Name</mat-label>
         <input type="email" matInput formControlName="fullName" placeholder="Ex. pat@example.com">
         <!-- <mat-error *ngIf="formGroup.get('fullName').hasError('email') && !formGroup.get('fullName').hasError('required')">
           Only a-z A-Z characters are allowed.
@@ -19,8 +19,8 @@
                 formControlName="preferedCar"
                 [matAutocomplete]="preferedCar">
             <mat-autocomplete #preferedCar="matAutocomplete">
-                <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
-                    {{street}}
+                <mat-option *ngFor="let car of filteredCar | async" [value]="car">
+                    {{car}}
                 </mat-option>
             </mat-autocomplete>
         </mat-form-field>
@@ -35,13 +35,13 @@
                 formControlName="autoParts"
                 [matAutocomplete]="autoParts">
             <mat-autocomplete #autoParts="matAutocomplete">
-                <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
-                    {{street}}
+                <mat-option *ngFor="let autoPart of filteredAutoParts | async" [value]="autoPart">
+                    {{autoPart}}
                 </mat-option>
             </mat-autocomplete>
         </mat-form-field>
     </div>
-    <button mat-raised-button color="accent" tyepe="submit">Accent</button>
+    <button mat-raised-button color="accent" tyepe="submit">Register</button>
   </form>
 
 <div>

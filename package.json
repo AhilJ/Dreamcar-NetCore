@@ -28,6 +28,7 @@
     "@ngrx/store": "^13.0.2",
     "@ngrx/store-devtools": "^13.0.2",
     "express": "^4.17.2",
+    "lodash": "^4.17.21",
     "ng2-select": "^2.0.0",
     "ngrx-store-localstorage": "^13.0.0",
     "path": "^0.12.7",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.4",
     "@types/jasmine": "~3.10.0",
+    "@types/lodash": "^4.14.178",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",

@@ -9,11 +9,7 @@ import { of } from 'rxjs';
   styleUrls: ['./car-registration.component.scss']
 })
 export class CarRegistrationComponent {
-  constructor(private _route: ActivatedRoute) {
-    this._route.data.subscribe((data: any) => {
-      console.log(data);
-    });
-  }
+  constructor() {}
 
   ngOnInit() {
   }
