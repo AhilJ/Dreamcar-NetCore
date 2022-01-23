@@ -14,3 +14,7 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+
+export const ApiRoutes = {
+  autoApi: `https://s3-ap-southeast-1.amazonaws.com/he-public-data`
+}

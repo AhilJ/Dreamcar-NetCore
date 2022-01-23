@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarRegistrationComponent } from './car-booking/containers/car-registration/car-registration.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'car/registration', pathMatch: 'full'},
   {path: 'car', redirectTo: 'car/registration', pathMatch: 'full'},
   {
     path: 'car/registration',
-    component: CarRegistrationComponent
+    loadChildren: () => import('./car-booking/car-booking.module').then(m => m.CarBookingModule)
   }
 ];
 

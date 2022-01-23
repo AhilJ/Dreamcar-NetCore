@@ -1,1 +1,47 @@
-<p>customer-registration works!</p>
+<form [formGroup]="formGroup" class="registration-form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="fullName" placeholder="Ex. pat@example.com">
+        <!-- <mat-error *ngIf="formGroup.get('fullName').hasError('email') && !formGroup.get('fullName').hasError('required')">
+          Only a-z A-Z characters are allowed.
+        </mat-error>
+        <mat-error *ngIf="formGroup.get('fullName').hasError('required')">
+          Full Name is <strong>required</strong>
+        </mat-error> -->
+      </mat-form-field>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Search for a car</mat-label>
+            <input type="text"
+                matInput
+                placeholder="Search for a car"
+                formControlName="preferedCar"
+                [matAutocomplete]="preferedCar">
+            <mat-autocomplete #preferedCar="matAutocomplete">
+                <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                    {{street}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Search for a Auto parts</mat-label>
+            <input type="text"
+                matInput
+                placeholder="Search for a Auto parts"
+                formControlName="autoParts"
+                [matAutocomplete]="autoParts">
+            <mat-autocomplete #autoParts="matAutocomplete">
+                <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                    {{street}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+    <button mat-raised-button color="accent" tyepe="submit">Accent</button>
+  </form>
+
+<div>
