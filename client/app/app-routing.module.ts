@@ -4,7 +4,7 @@ import { CarRegistrationComponent } from './car-booking/containers/car-registrat
 
 const routes: Routes = [
   {path: '', redirectTo: 'car/registration', pathMatch: 'full'},
-  {path: 'car', redirectTo: 'products/list', pathMatch: 'full'},
+  {path: 'car', redirectTo: 'car/registration', pathMatch: 'full'},
   {
     path: 'car/registration',
     component: CarRegistrationComponent
